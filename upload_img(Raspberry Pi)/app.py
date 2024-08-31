@@ -72,8 +72,8 @@ def index():
 @app.route('/capture', methods=['POST'])
 def capture_and_send():
     if capture_image():
-        url = 'http://203.241.246.172:15000/upload'  # 서버 주소 변경 필요 시 여기를 수정
-        #url = 'http://:5000/upload'  # 서버 주소 변경 필요 시 여기를 수정
+        url = 'http://255.255.255.255:25555/upload'  # 서버 주소 변경 필요 시 여기를 수정
+        #url = 'http://:2555/upload'  # 서버 주소 변경 필요 시 여기를 수정
         send_image(url, last_image_path)
         return jsonify(message="사진이 성공적으로 촬영 및 전송되었습니다!")
     else:
